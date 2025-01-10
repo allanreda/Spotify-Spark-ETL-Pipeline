@@ -1,11 +1,13 @@
 # Spotify New Releases - Spark ETL Pipeline
+Try the dashboard out live at: https://lookerstudio.google.com/u/0/reporting/f258ee4e-d0b1-4760-bfad-c27af9185053/page/aUmaE  
+
+![image](https://github.com/user-attachments/assets/4695d872-c856-4db3-8a08-77c0d7de117a)
 
 ## Introduction
 This project automates the extraction, transformation, and loading of Spotify's "New Releases" data for European markets into a Looker dashboard. The pipeline is designed to run weekly, fetching the latest tracks without any manual intervention. Using Google Cloud services like Cloud Run, Cloud Storage, and BigQuery, combined with PySpark on Dataproc, the pipeline efficiently processes raw API data into a format suitable for visualization.
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Goal](#goal)
 - [Project Diagram](#project-diagram)
 - [Raw Data Ingestion](#raw-data-ingestion)
   - [Authentication and API Token Management](#authentication-and-api-token-management)
@@ -24,7 +26,7 @@ This project automates the extraction, transformation, and loading of Spotify's 
 - [Technologies](#technologies)
 
 ## Project Diagram
-![spotify_spark_pipeline drawio (1)](https://github.com/user-attachments/assets/ef14e2f7-9143-49aa-93c0-356576b8ee45)
+![image](https://github.com/user-attachments/assets/bb90591f-fefe-4f85-a89c-cb5508099c91)
 
 ## Raw Data Ingestion
 The ingestion of the raw data from the Spotify API happens in the 'ingestion_function.py' which is deployed as a Cloud Run Function. This Function is invoked every monday at 12 AM by a seperate Cloud Scheduler.  
